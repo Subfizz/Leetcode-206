@@ -1,0 +1,10 @@
+class Solution(object):
+  def reverseList(self, head): 
+    arr = head
+    sort = None
+    while arr:
+      next = arr.next
+      arr.next = sort
+      sort = arr
+      arr = next
+    return sort
